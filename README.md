@@ -21,7 +21,7 @@ https://claude.ai/share/c87c8469-8bda-4168-9ac2-8590f1cda668
 https://claude.ai/share/885078c5-8e72-48b8-831c-3794acb6539f
 </br>
 </br>
-In rest of this article I discuss various seed identification method and show their impact on a simulated diffusion on a publicly available Facebook ego graph (4039 nodes, 88234 edges). I also discuss the results of experiments I did to understand the diffusion behavior when <i><b>k</b></i> = 8, 13 and 21 nodes are selected as seed nodes and when network edges have probability <i><b>p</b></i> = 0.01, 0.05 and 0.1.
+In rest of this article I discuss various seed identification method and show their impact on a simulated diffusion on a publicly available Facebook ego graph (4039 nodes, 88234 edges). I also discuss the results of experiments I did to understand the diffusion behavior when <i><b>k</b></i> = 8, 13 and 21 nodes are selected as seed nodes and when network edges have probability <i><b>p</b></i> = 0.01, 0.05 and 0.1 of getting activated.
 </br>
 <h3>Data for experiments</h3>
 To demonstrate the reach of initial seed nodes in information propagation in a network I use a publicly available tiny subset of Facebook ego graph from <a href="https://snap.stanford.edu/data/ego-Facebook.html">here</a>. This is an undirected graph with 4039 nodes and 88234 edges.
