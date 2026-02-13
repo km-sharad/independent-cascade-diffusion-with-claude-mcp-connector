@@ -52,7 +52,16 @@ FARNESS CENTRALITY: the total geodesic distance from a given node to all other n
 <i>Greedy Hill Climbing Algorithm:</i>
 </br>
 The Greedy Hill Climbing algorithm is based upon the principle of submodularity also know as diminishing returns condition. In this context it means that a node when added to the larger set of seeds will result in lower gain, in terms of reach, as compared to when it's added to a smaller set of seeds. Kempe <i>et al.</i> discuss this in their paper <i>Influential Nodes in a Diffusion Model for Social
-Networks</i> [^kempe2]
+Networks</i>. [^kempe2] Here's is the algorithm from the paper (<i><b>k</b></i> is the number of seeds to be identified):
+</br>
+```
+	start with A = ∅ 
+	for I = 1 to k do 
+		let vi be a node (approximately) maximizing the marginal gain σ(A ∪ {vi}) − σ(A).
+		Set A ← A ∪ {vi}. 
+	end for 
+```  
+
 
 
 
