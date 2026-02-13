@@ -33,9 +33,9 @@ Graph data structure represents relationship information very effectively in a b
 Optimal selection of the seed nodes is important because the right selection of these node exploits the structure of the underlying network for  diffusion of information organically. I will discuss two  techniques for identifying seed nodes:
 <ol>
 <li>Classical network science centrality measures: betweenness, degree, Katz etc.</li>
-<li>Greedy Hill Climbing  algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe <i>at al.</i> [^1]</li>
+<li>Greedy Hill Climbing  algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe <i>at al.</i> [^kempe]</li>
 </ol>
 
 I briefly explain these methods below. The details are available in [Jackson, Barabasi and Kempe et al. paper]
 
-[^1]: https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf 
+[^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
