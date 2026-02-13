@@ -1,14 +1,13 @@
 # independent-cascade-diffusion-with-claude-mcp-connector
 I discuss and demonstrate the impact of seed nodes selection on information diffusion in a network. I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the Model Context Protocol (MCP) architecture so that users can ask network related questions in natural language.
 
-<h2>Introduction</h2>
-
+<h3>Introduction</h3>
 In this article I discuss and demonstrate the impact of seed nodes selection on information diffusion in a network (or graph). Seed nodes of the graph are the initial nodes that first get exposed to the information (product launch, new social scheme etc.) and information diffusion is the distance (in number of edges) that the information travels in the network. I use classical Network Science methods - like betweenness, degree, Katz -  and Greedy Hill Climbing algorithm for identifying seed nodes.
 </br>
 I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the Model Context Protocol (MCP) architecture so that users can ask network related questions in natural language. These MCP connectors expands the LLM's capability by providing relevant context to answer users' questions like:
 </br>
 <ul>
-<li>What nodes in the network are easy to influence and convert and which ones are hard?<li>
+<li>What nodes in the network are easy to influence and convert and which ones are hard?</li>
 <li>What seeds are responsible for the largest contagion?</li>
 <li>What method of seed identification has maximum reach when 21 nodes are used as seed nodes?</li>
 <li>If it takes $50 to activate odd number nodes and $100 to activate even number nodes, which method is the most economical to reach at least 2000 people?</li>
