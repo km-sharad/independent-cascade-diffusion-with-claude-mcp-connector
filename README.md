@@ -48,6 +48,13 @@ KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of leng
 K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length k emanating from a given node. For k seeds, I take k nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
 </br>
 FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take k nodes with lowest farness centrality measure as seeds.
+</br>
+<i>Greedy Hill Climbing Algorithm:</i>
+</br>
+The Greedy Hill Climbing algorithm is based upon the principle of submodularity also know as diminishing returns condition. In this context it means that a node when added to the larger set of seeds will result in lower gain, in terms of reach, as compared to when it's added to a smaller set of seeds. Kempe <i>et al.</i> discuss this in their paper <i>Influential Nodes in a Diffusion Model for Social
+Networks</i> [^kempe2]
+
+
 
 
 
@@ -55,3 +62,4 @@ FARNESS CENTRALITY: the total geodesic distance from a given node to all other n
 [^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
 [^Jackson]: Jackson, M (2008). Social and Economic Networks.
 [^Barabasi]: Barabasi, A (2016). Network Science.
+[^kempe2]: Kempe, D., Kleinberg, J., & Tardos, É. (2005). Influential Nodes in a Diffusion Model for Social Networks
