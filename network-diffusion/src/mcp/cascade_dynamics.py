@@ -168,8 +168,6 @@ async def analyze_seed_impact(k: int, p: float, method: str) -> str:
             prob = stats['activation_probability']
             
             # Find closest seed (approximate by checking all seeds)
-            # This is simplified - in reality you'd need to track which seed activated which node
-            # For now, we'll count all nodes by their distance
             for seed in seeds:
                 try:
                     actual_distance = nx.shortest_path_length(G, seed, node)

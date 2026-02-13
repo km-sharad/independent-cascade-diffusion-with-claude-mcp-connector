@@ -3,7 +3,7 @@ import json
 
 mcp = FastMCP("network-centrality")
 
-# Load your data once at startup
+# Load data once at startup
 with open("../../data/diffusion_stats/network_data.json") as f:
     # /Users/thematrix/sharadkumar/Code/Git/independent-cascade-diffusion-with-claude-mcp-connector/network-diffusion/data/diffusion_stats/network_data.json
     NETWORK_DATA = json.load(f)
