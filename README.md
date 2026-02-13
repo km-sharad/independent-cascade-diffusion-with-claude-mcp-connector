@@ -1,0 +1,2 @@
+# independent-cascade-diffusion-with-claude-mcp-connector
+I discuss and demonstrate the impact of seed nodes selection on information diffusion in a network. I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the Model Context Protocol (MCP) architecture so that users can ask network related questions in natural language.
