@@ -99,6 +99,7 @@ To compare the influence spread by seeds identified by different techniques I si
 </br>
 In my experiments I found that in almost all the cases while nodes identified by betweenness centrality performed best and slightly better than the nodes identified by the Greedy Hill Climbing algorithm, the influence spread (no. of nodes activated) to number of seed nodes ratio was usually better for the Greedy Hill Climbing algorithm. Results of the experiments are shown in the table below.
 </br>
+</br>
 
 | k  | p    | Mode                    | Numbers of seed nodes activated | Influence (number of nodes reached by diffusion) | Time to find k nodes (secs) |
 |----|------|-------------------------|----------------------------------|--------------------------------------------------|-----------------------------|
@@ -156,10 +157,6 @@ In my experiments I found that in almost all the cases while nodes identified by
 | 21 | 0.1  | K-GEODESIC CENTRALITY   | 21 | 2912.36 | 39.17   |
 | 21 | 0.1  | FAIRNESS CENTRALITY     | 21 | 2932.46 | 31.62   |
 | 21 | 0.1  | GREEDY IC               | 6  | 3054.28 | 24119.13|
-
-
-
-
 
 [^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
 [^Jackson]: Jackson, M (2008). Social and Economic Networks.
