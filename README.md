@@ -22,10 +22,8 @@ https://claude.ai/share/885078c5-8e72-48b8-831c-3794acb6539f
 </br>
 In rest of this article I discuss various seed identification method and show their impact on a simulated diffusion on a publicly available Facebook ego graph (4039 nodes, 88234 edges). I also discuss the results of experiments I did to understand the diffusion behavior when <i><b>k</b></i> = 8, 13 and 21 nodes are selected as seed nodes and when network edges have probability <i><b>p</b></i> = 0.01, 0.05 and 0.1.
 </br>
-</br>
 <h3>Data for experiments</h3>
 To demonstrate the reach of initial seed nodes in information propagation in a network I use a publicly available tiny subset of Facebook ego graph from <a href="https://snap.stanford.edu/data/ego-Facebook.html">here</a>. This is an undirected graph with 4039 nodes and 88234 edges.
-</br>
 </br>
 <h3>Why are graphs interesting</h3>
 Graph data structure represents relationship information very effectively in a business setting. For example, relationships among current and potential B2B customers of a wholesaler,  a professional network of doctors who are client of a pharmaceutical company, or friends and acquaintances who are all fans of a sports team. In all these, and similar, settings nodes represent an entity - a person, an organization etc. - and edges the relationship between them. Graphs encode static relationships between these entities and graph algorithms help us understand interactions between these entities. This knowledge can be used to simulate information cascade in a network after an initial set of nodes are exposed to the information.
