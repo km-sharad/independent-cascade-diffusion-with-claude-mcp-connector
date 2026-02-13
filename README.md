@@ -35,8 +35,9 @@ Optimal selection of the seed nodes is important because the right selection of 
 1. Classical network science centrality measures: betweenness, degree, Katz etc.
 2. Greedy Hill Climbing algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe *et al.* [^kempe]
 
-I briefly explain these measures below. Jackson [^Jackson] have explained these in their books.
+I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have explained these in their books.
 
 
 [^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
-[^Jackson]: Jackson, M (2008). Social and Economic Networks
+[^Jackson]: Jackson, M (2008). Social and Economic Networks.
+[^Barabasi]: Barabasi, A (2016). Network Science.
