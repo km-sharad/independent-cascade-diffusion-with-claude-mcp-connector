@@ -55,11 +55,11 @@ The Greedy Hill Climbing algorithm is based upon the principle of submodularity 
 Networks</i>. [^kempe2] Here's is the algorithm from the paper (<i><b>k</b></i> is the number of seeds to be identified):
 </br>
 ```
-	start with A = ∅ 
-	for I = 1 to k do 
-		let vi be a node (approximately) maximizing the marginal gain σ(A ∪ {vi}) − σ(A).
-		Set A ← A ∪ {vi}. 
-	end for 
+start with A = ∅ 
+for i = 1 to k do 
+	let vi be a node (approximately) maximizing the marginal gain σ(A ∪ {vi}) − σ(A).
+	Set A ← A ∪ {vi}. 
+end for 
 ```  
 
 
