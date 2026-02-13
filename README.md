@@ -24,7 +24,7 @@ In rest of this article I discuss various seed identification method and show th
 </br>
 </br>
 <h3>Data for experiments</h3>
-To demonstrate the reach of initial seed nodes in information propagation in a network I use a publicly available tiny subset of Facebook ego graph from <href="https://snap.stanford.edu/data/ego-Facebook.html">here</href>. This is an undirected graph with 4039 nodes and 88234 edges.
+To demonstrate the reach of initial seed nodes in information propagation in a network I use a publicly available tiny subset of Facebook ego graph from <a href="https://snap.stanford.edu/data/ego-Facebook.html">here</a>. This is an undirected graph with 4039 nodes and 88234 edges.
 </br>
 </br>
 <h3>Why are graphs interesting</h3>
