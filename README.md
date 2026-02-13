@@ -61,8 +61,13 @@ for i = 1 to k do
 	Set A ← A ∪ {vi}. 
 end for 
 ```  
-</br>
+
 I use the Independent Cascade diffusion simulation method [^kempe], to calculate the marginal gainin the first line of the for loop above.
+</br>
+<i>Information diffusion simulation algorithm</i>
+Other than using the IC method for identifying nodes in the Hill Climbing algorithm, I also use it to simulate diffusion in the network from seed nodes identified by the methods above. The IC method is a probabilistic algorithm where once a node is activated, it gets one chance to activate all its neighbors with a predefined probability <i><b>p</b></i>. (In their paper Kempe et al. use a different activation probability for each node, for simplicity I use a fixed value for <i><b>p</b></i>). This algorithm progresses in time steps and nodes activated in one time step attempt to activate their neighbors in the next time step. Details about the IC and Greedy Hill Climbing algorithm are in the paper[^kempe2].
+
+
 
 
 
