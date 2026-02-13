@@ -35,7 +35,7 @@ Optimal selection of the seed nodes is important because the right selection of 
 1. Classical network science centrality measures: betweenness, degree, Katz etc.
 2. Greedy Hill Climbing algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe *et al.* [^kempe]
 
-I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have explained these in their books.
+I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have covered these in their books.
 
 <i>Classical Network Science based node selection methods:</i>
 </br>
