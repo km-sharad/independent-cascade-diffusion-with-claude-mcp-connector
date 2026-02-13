@@ -392,7 +392,6 @@ def load_graph():
     return G
 
 if __name__ == "__main__":
-    # Load your graph
     G = load_graph()
     
     # Define parameter ranges
