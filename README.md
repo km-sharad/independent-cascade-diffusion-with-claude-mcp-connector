@@ -30,9 +30,7 @@ To demonstrate the reach of initial seed nodes in information propagation in a n
 Graph data structure represents relationship information very effectively in a business setting. For example, relationships among current and potential B2B customers of a wholesaler,  a professional network of doctors who are client of a pharmaceutical company, or friends and acquaintances who are all fans of a sports team. In all these, and similar, settings nodes represent an entity - a person, an organization etc. - and edges the relationship between them. Graphs encode static relationships between these entities and graph algorithms help us understand interactions between these entities. This knowledge can be used to simulate information cascade in a network after an initial set of nodes are exposed to the information.
 </br>
 <h3>Seed selection and diffusion simulation methods</h3>
-Optimal selection of the seed nodes is important because the right selection of these node exploits the structure of the underlying network for  diffusion of information organically. 
-
-I discuss two  techniques for identifying seed nodes:
+Optimal selection of the seed nodes is important because the right selection of these node exploits the structure of the underlying network for  diffusion of information organically. I discuss two  techniques for identifying seed nodes:
 1. Classical network science centrality measures: betweenness, degree, Katz etc.
 2. Greedy Hill Climbing algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe *et al.* [^kempe]
 
