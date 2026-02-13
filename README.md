@@ -43,7 +43,7 @@ DEGREE CENTRALITY: ratio of number of nodes incident of a node over (n-1), where
 </br>
 BETWEENNESS CENTRALITY: the number of times that any node needs a given node to reach any other node. I take <i><b>k</i></b> nodes with highest betweenness centrality measure as seeds.
 </br>
-KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. For <i><b>k</i></b> seeds, I take k nodes with highest Katz centrality measure as seeds.
+KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. I take <i><b>k</i></b> nodes with highest Katz centrality measure as seeds.
 </br>
 K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length k emanating from a given node. I take <i><b>k</i></b> nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
 </br>
