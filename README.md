@@ -45,7 +45,7 @@ BETWEENNESS CENTRALITY: the number of times that any node needs a given node to 
 </br>
 KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. I take <i><b>k</i></b> nodes with highest Katz centrality measure as seeds.
 </br>
-K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length k emanating from a given node. I take <i><b>k</i></b> nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
+K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length <i><b>k</i></b> emanating from a given node. I take <i><b>k</i></b> nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
 </br>
 FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take <i><b>k</i></b> nodes with lowest farness centrality measure as seeds.
 </br>
