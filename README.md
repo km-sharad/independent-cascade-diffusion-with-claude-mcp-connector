@@ -99,6 +99,62 @@ To compare the influence spread by seeds identified by different techniques I si
 </br>
 In my experiments I found that in almost all the cases while nodes identified by betweenness centrality performed best and slightly better than the nodes identified by the Greedy Hill Climbing algorithm, the influence spread (no. of nodes activated) to number of seed nodes ratio was usually better for the Greedy Hill Climbing algorithm. Results of the experiments are shown in the table below.
 
+| k  | p    | Mode                    | Numbers of seed nodes activated | Influence (number of nodes reached by diffusion) | Time to find k nodes (secs) |
+|----|------|-------------------------|----------------------------------|--------------------------------------------------|-----------------------------|
+| 8  | 0.01 | DEGREE CENTRALITY       | 8  | 295.54  | 0.00    |
+| 8  | 0.01 | BETWEENNESS CENTRALITY  | 8  | 218.90  | 99.97   |
+| 8  | 0.01 | KATZ CENTRALITY         | 8  | 189.04  | 11.88   |
+| 8  | 0.01 | K-GEODESIC CENTRALITY   | 8  | 95.34   | 38.76   |
+| 8  | 0.01 | FAIRNESS CENTRALITY     | 8  | 111.92  | 31.21   |
+| 8  | 0.01 | GREEDY IC               | 8  | 282.18  | 6838.37 |
+| 8  | 0.05 | DEGREE CENTRALITY       | 8  | 2156.88 | 0.00    |
+| 8  | 0.05 | BETWEENNESS CENTRALITY  | 8  | 2199.02 | 99.35   |
+| 8  | 0.05 | KATZ CENTRALITY         | 8  | 1784.38 | 11.80   |
+| 8  | 0.05 | K-GEODESIC CENTRALITY   | 8  | 1958.86 | 39.02   |
+| 8  | 0.05 | FAIRNESS CENTRALITY     | 8  | 2002.50 | 31.61   |
+| 8  | 0.05 | GREEDY IC               | 8  | 2206.40 | 25451.75|
+| 8  | 0.1  | DEGREE CENTRALITY       | 8  | 2955.62 | 0.00    |
+| 8  | 0.1  | BETWEENNESS CENTRALITY  | 8  | 3044.02 | 98.64   |
+| 8  | 0.1  | KATZ CENTRALITY         | 8  | 2886.86 | 11.88   |
+| 8  | 0.1  | K-GEODESIC CENTRALITY   | 8  | 2935.02 | 38.47   |
+| 8  | 0.1  | FAIRNESS CENTRALITY     | 8  | 2900.28 | 30.86   |
+| 8  | 0.1  | GREEDY IC               | 8  | 3017.70 | 29968.03|
+| 13 | 0.01 | DEGREE CENTRALITY       | 13 | 318.68  | 0.00    |
+| 13 | 0.01 | BETWEENNESS CENTRALITY  | 13 | 245.22  | 99.30   |
+| 13 | 0.01 | KATZ CENTRALITY         | 13 | 189.78  | 11.80   |
+| 13 | 0.01 | K-GEODESIC CENTRALITY   | 13 | 105.10  | 39.17   |
+| 13 | 0.01 | FAIRNESS CENTRALITY     | 13 | 134.90  | 31.49   |
+| 13 | 0.01 | GREEDY IC               | 9  | 232.46  | 7919.42 |
+| 13 | 0.05 | DEGREE CENTRALITY       | 13 | 2164.50 | 0.00    |
+| 13 | 0.05 | BETWEENNESS CENTRALITY  | 13 | 2203.12 | 99.01   |
+| 13 | 0.05 | KATZ CENTRALITY         | 13 | 1853.48 | 11.68   |
+| 13 | 0.05 | K-GEODESIC CENTRALITY   | 13 | 1873.42 | 38.71   |
+| 13 | 0.05 | FAIRNESS CENTRALITY     | 13 | 1956.96 | 31.26   |
+| 13 | 0.05 | GREEDY IC               | 7  | 2205.48 | 25664.30|
+| 13 | 0.1  | DEGREE CENTRALITY       | 13 | 2962.48 | 0.00    |
+| 13 | 0.1  | BETWEENNESS CENTRALITY  | 13 | 3033.34 | 98.92   |
+| 13 | 0.1  | KATZ CENTRALITY         | 13 | 2941.80 | 11.72   |
+| 13 | 0.1  | K-GEODESIC CENTRALITY   | 13 | 2926.00 | 38.81   |
+| 13 | 0.1  | FAIRNESS CENTRALITY     | 13 | 2919.00 | 31.40   |
+| 13 | 0.1  | GREEDY IC               | 7  | 3039.42 | 24448.87|
+| 21 | 0.01 | DEGREE CENTRALITY       | 21 | 337.94  | 0.00    |
+| 21 | 0.01 | BETWEENNESS CENTRALITY  | 21 | 289.26  | 98.83   |
+| 21 | 0.01 | KATZ CENTRALITY         | 21 | 185.30  | 11.80   |
+| 21 | 0.01 | K-GEODESIC CENTRALITY   | 21 | 145.22  | 38.13   |
+| 21 | 0.01 | FAIRNESS CENTRALITY     | 21 | 130.86  | 30.84   |
+| 21 | 0.01 | GREEDY IC               | 9  | 269.30  | 7710.43 |
+| 21 | 0.05 | DEGREE CENTRALITY       | 21 | 2153.28 | 0.00    |
+| 21 | 0.05 | BETWEENNESS CENTRALITY  | 21 | 2232.28 | 98.64   |
+| 21 | 0.05 | KATZ CENTRALITY         | 21 | 1756.68 | 11.70   |
+| 21 | 0.05 | K-GEODESIC CENTRALITY   | 21 | 2012.40 | 38.31   |
+| 21 | 0.05 | FAIRNESS CENTRALITY     | 21 | 2043.70 | 30.83   |
+| 21 | 0.05 | GREEDY IC               | 14 | 2231.92 | 51047.54|
+| 21 | 0.1  | DEGREE CENTRALITY       | 21 | 2941.88 | 0.00    |
+| 21 | 0.1  | BETWEENNESS CENTRALITY  | 21 | 3051.24 | 99.93   |
+| 21 | 0.1  | KATZ CENTRALITY         | 21 | 2876.14 | 11.85   |
+| 21 | 0.1  | K-GEODESIC CENTRALITY   | 21 | 2912.36 | 39.17   |
+| 21 | 0.1  | FAIRNESS CENTRALITY     | 21 | 2932.46 | 31.62   |
+| 21 | 0.1  | GREEDY IC               | 6  | 3054.28 | 24119.13|
 
 
 
