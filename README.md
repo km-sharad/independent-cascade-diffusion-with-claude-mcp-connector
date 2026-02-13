@@ -61,6 +61,8 @@ for i = 1 to k do
 	Set A ← A ∪ {vi}. 
 end for 
 ```  
+</br>
+I use the Independent Cascade diffusion simulation method [^kempe], to calculate the marginal gainin the first line of the for loop above.
 
 
 
