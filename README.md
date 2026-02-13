@@ -38,6 +38,7 @@ Optimal selection of the seed nodes is important because the right selection of 
 I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have explained these in their books.
 
 <i>Classical Network Science based node selection methods:</i>
+</br>
 DEGREE CENTRALITY: ratio of number of nodes incident of a node over (n-1), where n is the total number of nodes in the network. I take k nodes with highest degree centrality measure as seeds.
 </br>
 BETWEENNESS CENTRALITY: the number of times that any node needs a given node to reach any other node. I take k nodes with highest betweenness centrality measure as seeds.
