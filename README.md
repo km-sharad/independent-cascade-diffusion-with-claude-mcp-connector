@@ -160,5 +160,5 @@ In my experiments I found that in almost all the cases while nodes identified by
 
 [^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
 [^Jackson]: <a href="https://press.princeton.edu/books/paperback/9780691148205/social-and-economic-networks?srsltid=AfmBOooobgqQMQIZoMb-Pk4aMhmodIGw2s_FLBCuqqM3AWnlpp8Kd5zh">Jackson, M (2008). Social and Economic Networks.</a>
-[^Barabasi]: Barabasi, A (2016). Network Science.
+[^Barabasi]: <a href="https://networksciencebook.com/">Barabasi, A (2016). Network Science.</a>
 [^kempe2]: Kempe, D., Kleinberg, J., & Tardos, É. (2005). Influential Nodes in a Diffusion Model for Social Networks
