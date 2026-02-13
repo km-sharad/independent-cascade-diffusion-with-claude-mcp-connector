@@ -49,6 +49,7 @@ K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between t
 </br>
 FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take k nodes with lowest farness centrality measure as seeds.
 </br>
+</br>
 <i>Greedy Hill Climbing Algorithm:</i>
 </br>
 The Greedy Hill Climbing algorithm is based upon the principle of submodularity also know as diminishing returns condition. In this context it means that a node when added to the larger set of seeds will result in lower gain, in terms of reach, as compared to when it's added to a smaller set of seeds. Kempe <i>et al.</i> discuss this in their paper <i>Influential Nodes in a Diffusion Model for Social
