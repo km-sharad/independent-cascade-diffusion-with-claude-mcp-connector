@@ -37,6 +37,19 @@ Optimal selection of the seed nodes is important because the right selection of 
 
 I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have explained these in their books.
 
+<i>Classical Network Science based node selection methods:</i>
+DEGREE CENTRALITY: ratio of number of nodes incident of a node over (n-1), where n is the total number of nodes in the network. I take k nodes with highest degree centrality measure as seeds.
+</br>
+BETWEENNESS CENTRALITY: the number of times that any node needs a given node to reach any other node. I take k nodes with highest betweenness centrality measure as seeds.
+</br>
+KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. For k seeds, I take k nodes with highest Katz centrality measure as seeds.
+</br>
+K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length k emanating from a given node. For k seeds, I take k nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
+</br>
+FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take k nodes with lowest farness centrality measure as seeds.
+
+
+
 
 [^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
 [^Jackson]: Jackson, M (2008). Social and Economic Networks.
