@@ -158,7 +158,7 @@ In my experiments I found that in almost all the cases while nodes identified by
 | 21 | 0.1  | FAIRNESS CENTRALITY     | 21 | 2932.46 | 31.62   |
 | 21 | 0.1  | GREEDY IC               | 6  | 3054.28 | 24119.13|
 
-[^kempe]: Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.
+[^kempe]: <a href="https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf">Kempe, D., Kleinberg, J., & Tardos, É. (2003). Maximizing the spread of influence through a social network.</a>
 [^Jackson]: <a href="https://press.princeton.edu/books/paperback/9780691148205/social-and-economic-networks?srsltid=AfmBOooobgqQMQIZoMb-Pk4aMhmodIGw2s_FLBCuqqM3AWnlpp8Kd5zh">Jackson, M (2008). Social and Economic Networks.</a>
 [^Barabasi]: <a href="https://networksciencebook.com/">Barabasi, A (2016). Network Science.</a>
 [^kempe2]: <a href="https://www.cs.cornell.edu/home/kleinber/icalp05-inf.pdf">Kempe, D., Kleinberg, J., & Tardos, É. (2005). Influential Nodes in a Diffusion Model for Social Networks.</a>
