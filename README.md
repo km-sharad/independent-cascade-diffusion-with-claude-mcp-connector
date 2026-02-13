@@ -5,10 +5,10 @@ I discuss and demonstrate the impact of seed nodes selection on information diff
 In this article I discuss and demonstrate the impact of seed nodes selection on information diffusion in a network (or graph). Seed nodes of the graph are the initial nodes that first get exposed to the information (product launch, new social scheme etc.) and information diffusion is the distance (in number of edges) that the information travels in the network. I use classical Network Science centrality measures - like betweenness, degree, Katz -  and <a href="https://www.cs.cornell.edu/home/kleinber/icalp05-inf.pdf">Greedy Hill Climbing algorithm</a>, due to Kempe <i>et al.</i> for identifying seed nodes. I use the <a href="https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf">Independent Cascade</a> diffusion algorithm, also due to Kempe <i>et al.</i>, for simulating diffusion in the network.
 </br>
 </br>
-I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the Model Context Protocol (MCP) architecture so that users can ask network related questions in natural language. These MCP connectors expands the LLM's capability by providing relevant context to answer users' questions like:
+I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the Model Context Protocol (MCP) architecture so that users can ask network related questions in natural language. These MCP connectors expand the LLM's capability by providing relevant context to answer users' questions like:
 </br>
 <ul>
-<li>What nodes in the network are easy to influence and convert and which ones are hard?</li>
+<li>What nodes in the network are easier to influence and convert and which ones are harder?</li>
 <li>What seeds are responsible for the largest contagion?</li>
 <li>What method of seed identification has maximum reach when 21 nodes are used as seed nodes?</li>
 <li>If it takes $50 to activate odd number nodes and $100 to activate even number nodes, which method is the most economical to reach at least 2000 people?</li>
@@ -27,7 +27,7 @@ In rest of this article I discuss various seed identification method and show th
 To demonstrate the reach of initial seed nodes in information propagation in a network I use a publicly available tiny subset of Facebook ego graph from <a href="https://snap.stanford.edu/data/ego-Facebook.html">here</a>. This is an undirected graph with 4039 nodes and 88234 edges.
 </br>
 <h3>Why are graphs interesting</h3>
-Graph data structure represents relationship information very effectively in a business setting. For example, relationships among current and potential B2B customers of a wholesaler,  a professional network of doctors who are client of a pharmaceutical company, or friends and acquaintances who are all fans of a sports team. In all these, and similar, settings nodes represent an entity - a person, an organization etc. - and edges the relationship between them. Graphs encode static relationships between these entities and graph algorithms help us understand interactions between these entities. This knowledge can be used to simulate information cascade in a network after an initial set of nodes are exposed to the information.
+Graph data structure represents relationship information very effectively in a business setting. For example, relationships among current and potential B2B customers of a wholesaler,  a professional network of doctors who are client of a pharmaceutical company, or friends and acquaintances who are all fans of a sports team. In all these, and similar, settings nodes represent an entity - a person, an organization etc. - and edges the relationships between them. Graphs encode static relationships between these entities and graph algorithms help us understand interactions between these entities. This knowledge can be used to simulate information cascade in a network after an initial set of nodes are exposed to the information.
 </br>
 <h3>Seed selection and diffusion simulation methods</h3>
 Optimal selection of the seed nodes is important because the right selection of these node exploits the structure of the underlying network for  diffusion of information organically. I discuss two  techniques for identifying seed nodes:
@@ -35,24 +35,24 @@ Optimal selection of the seed nodes is important because the right selection of 
 1. Classical network science centrality measures: betweenness, degree, Katz etc.
 2. Greedy Hill Climbing algorithm using Independent Cascade (IC) diffusion method as proposed by Kempe *et al.* [^kempe]
 
-I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have explained these in their books.
+I briefly explain these measures below. Jackson [^Jackson] and Barabasi [^Barabasi] have covered these topics in their books at length.
 
 <i>Classical Network Science based node selection methods:</i>
 </br>
-DEGREE CENTRALITY: ratio of number of nodes incident of a node over (n-1), where n is the total number of nodes in the network. I take k nodes with highest degree centrality measure as seeds.
+DEGREE CENTRALITY: ratio of number of nodes incident of a node over (n-1), where n is the total number of nodes in the network. I take <i><b>k</i></b> nodes with highest degree centrality measure as seeds.
 </br>
-BETWEENNESS CENTRALITY: the number of times that any node needs a given node to reach any other node. I take k nodes with highest betweenness centrality measure as seeds.
+BETWEENNESS CENTRALITY: the number of times that any node needs a given node to reach any other node. I take <i><b>k</i></b> nodes with highest betweenness centrality measure as seeds.
 </br>
-KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. For k seeds, I take k nodes with highest Katz centrality measure as seeds.
+KATZ CENTRALITY: sums all walks starting or ending at a node, regardless of length; an attenuation factor here makes shorter  paths more valuable than longer ones. I take <i><b>k</i></b> nodes with highest Katz centrality measure as seeds.
 </br>
-K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length k emanating from a given node. For k seeds, I take k nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
+K-GEODESIC CENTRALITY: the number of geodesic paths (the shortest path between two nodes) up to length <i><b>k</i></b> emanating from a given node. I take <i><b>k</i></b> nodes with highest K-Geodesic centrality measure as seeds. (it's unfortunate that I am using k for max number of edges in a geodesic and also for number of seeds, just to be clear - they mean different things) 
 </br>
-FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take k nodes with lowest farness centrality measure as seeds.
+FARNESS CENTRALITY: the total geodesic distance from a given node to all other nodes. Closeness centrality is an inverse measure of centrality since larger values indicate less centrality. I take <i><b>k</i></b> nodes with lowest farness centrality measure as seeds.
+</br>
 </br>
 <i>Greedy Hill Climbing Algorithm:</i>
 </br>
-The Greedy Hill Climbing algorithm is based upon the principle of submodularity also know as diminishing returns condition. In this context it means that a node when added to the larger set of seeds will result in lower gain, in terms of reach, as compared to when it's added to a smaller set of seeds. Kempe <i>et al.</i> discuss this in their paper <i>Influential Nodes in a Diffusion Model for Social
-Networks</i>. [^kempe2] Here's is the algorithm from the paper (<i><b>k</b></i> is the number of seeds to be identified):
+The Greedy Hill Climbing algorithm is based upon the principle of submodularity also know as diminishing returns condition. In this context it means that a node when added to the larger set of seeds will result in lower gain, in terms of reach, as compared to when it's added to a smaller set of seeds. Kempe <i>et al.</i> discuss this in their paper <i>Influential Nodes in a Diffusion Model for Social Networks</i>. [^kempe2] Here's is the algorithm from the paper (<i><b>k</b></i> is the number of seeds to be identified):
 </br>
 ```
 start with A = ∅ 
@@ -72,7 +72,7 @@ Other than using the IC method for identifying nodes in the Hill Climbing algori
 <h3>Code</h3>
 <i>Seed identification and diffusion simulation code</i>
 </br>
-The code for identifying the seed nodes and simulating the diffusion in the network is in TBD.py. Given the initial number of seed nodes <i><b>k</b></i> and the probability <i><b>p</b></i> of a node activating its neighbor, I generate the following statistics for all seed identification methods:
+The code for identifying the seed nodes and simulating the diffusion in the network is in `network-diffusion/src/diffusion/fb_ego_diffusion_with_node_timesteps.py`. Given the initial number of seed nodes <i><b>k</b></i> and the probability <i><b>p</b></i> of a node activating its neighbor, I generate the following statistics for all seed identification methods:
 <ul>
 <li>Influence or reach in terms of total number of nodes activated</li>
 <li>Time steps taken for a node to get activated</li>
@@ -85,14 +85,14 @@ The code runs 50 simulations of the diffusion and collect the following statisti
 <li>Average attempts = average number of attempts taken to activate the node</li>
 <li>Average distance from the seed node (in iterations when the node got activated)</li>
 </ul>
-The statistics generated by the diffusion algorithm is saved in a JSON file and is available in the codebase TBD. Next, I explain how the statistics available in this file is used by the MCP connector.
+The statistics generated by the diffusion algorithm is saved in a JSON file and is available in the codebase here: `network-diffusion/data/diffusion_stats/network_centrality_results_with_logs.json`. Next, I explain how the statistics available in this file is used by the MCP connector.
 
 <h3>Integration with Claude Desktop using Model Context Protocol (MCP)</h3>
 MCP (Model Context Protocol) is an open-source protocol created by Anthropic that enables AI assistants like Claude to connect with external data sources and tools. I created MCP servers that use the statistics available in JSON file with diffusion statistics to obtain context knowledge for answering user questions about the graph. I connect these servers to Claude Desktop app using its connector pattern to integrate with external source. 
 </br>
 <i>MCP Code</i>
 </br>
-Code for MCP servers is available TBD and TBD.
+Code for MCP servers is available `network-diffusion/src/mcp/cascade_dynamics.py` and `network-diffusion/src/mcp/network_centrality.py`.
 </br>
 <h3>Experiments and results:</h3>
 To compare the influence spread by seeds identified by different techniques I simulated the diffusion on 8, 13 and 21 initial nodes and activation probability values of 0.01, 0.05 and 0.1.  Whereas the method of identifying seed nodes is formula based, the Hill Climbing node identification algorithm aborts if the reach does not improve in a timestep.
