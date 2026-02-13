@@ -12,11 +12,12 @@ I then show how insights obtained by data mining on a network can be integrated 
 <li>What method of seed identification has maximum reach when 21 nodes are used as seed nodes?</li>
 <li>If it takes $50 to activate odd number nodes and $100 to activate even number nodes, which method is the most economical to reach at least 2000 people?</li>
 </ul>
-</br>
+
 Here are the links to conversation I had with Claude Desktop after integrating the results of graph data mining with the LLM:
 </br>
 https://claude.ai/share/c87c8469-8bda-4168-9ac2-8590f1cda668
 </br>
 https://claude.ai/share/885078c5-8e72-48b8-831c-3794acb6539f
+</br>
 </br>
 In rest of this article I discuss various seed identification method and show their impact on a simulated diffusion on a publicly available Facebook ego graph (4039 nodes, 88234 edges). I also discuss the results of experiments I did to understand the diffusion behavior when <i><b>k</b></i> = 8, 13 and 21 nodes are selected as seed nodes and when network edges have probability <i><b>p</b></i> = 0.01, 0.05 and 0.1.
