@@ -101,7 +101,7 @@ In my experiments I found that in almost all the cases while nodes identified by
 </br>
 </br>
 
-| k  | p    | Mode                    | Numbers of seed nodes activated | Influence (number of nodes reached by diffusion) | Time to find k seed nodes (secs) |
+| k  | p    | Mode                    | Numbers of seed nodes activated | Influence (number of nodes reached by diffusion) | Time taken to find k seed nodes (secs) |
 |----|------|-------------------------|----------------------------------|--------------------------------------------------|-----------------------------|
 | 8  | 0.01 | DEGREE CENTRALITY       | 8  | 295.54  | 0.00    |
 | 8  | 0.01 | BETWEENNESS CENTRALITY  | 8  | 218.90  | 99.97   |
