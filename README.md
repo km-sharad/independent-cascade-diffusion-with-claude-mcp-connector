@@ -72,7 +72,7 @@ Other than using the IC method for identifying nodes in the Hill Climbing algori
 <h3>Code</h3>
 <i>Seed identification and diffusion simulation code</i>
 </br>
-The code for identifying the seed nodes and simulating the diffusion in the network is in `network-diffusion/src/diffusion/fb_ego_diffusion_with_node_timesteps.py`. Given the initial number of seed nodes <i><b>k</b></i> and the probability <i><b>p</b></i> of a node activating its neighbor, I generate the following statistics for all seed identification methods:
+The code for identifying the seed nodes and simulating the diffusion in the network is in <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/diffusion/fb_ego_diffusion_with_node_timesteps.py">network-diffusion/src/diffusion/fb_ego_diffusion_with_node_timesteps.py</a>. Given the initial number of seed nodes <i><b>k</b></i> and the probability <i><b>p</b></i> of a node activating its neighbor, I generate the following statistics for all seed identification methods:
 <ul>
 <li>Influence or reach in terms of total number of nodes activated</li>
 <li>Time steps taken for a node to get activated</li>
