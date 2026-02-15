@@ -92,7 +92,7 @@ MCP (Model Context Protocol) is an open-source protocol created by Anthropic tha
 </br>
 <i>MCP Code</i>
 </br>
-Code for MCP servers is available <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/mcp/network_centrality.py">network-diffusion/src/mcp/cascade_dynamics.py</a> and `network-diffusion/src/mcp/network_centrality.py`.
+Code for MCP servers is available <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/mcp/cascade_dynamics.py">network-diffusion/src/mcp/cascade_dynamics.py</a> and <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/mcp/network_centrality.py">network-diffusion/src/mcp/network_centrality.py</a>.
 </br>
 <h3>Experiments and results:</h3>
 To compare the influence spread by seeds identified by different techniques I simulated the diffusion on <b><i>k</i></b> = 8, 13 and 21 initial nodes and activation probability values of <b><i>p</i></b> = 0.01, 0.05 and 0.1.  Whereas the method of identifying seed nodes is formula based, the Hill Climbing node identification algorithm aborts if the reach does not improve in a timestep.
