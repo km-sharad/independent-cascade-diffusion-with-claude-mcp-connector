@@ -95,7 +95,7 @@ MCP (Model Context Protocol) is an open-source protocol created by Anthropic tha
 Code for MCP servers is available <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/mcp/cascade_dynamics.py">network-diffusion/src/mcp/cascade_dynamics.py</a> and <a href="https://github.com/km-sharad/independent-cascade-diffusion-with-claude-mcp-connector/blob/main/network-diffusion/src/mcp/network_centrality.py">network-diffusion/src/mcp/network_centrality.py</a>.
 </br>
 <h3>Experiments and results:</h3>
-To compare the influence spread by seeds identified by different techniques I simulated the diffusion on <b><i>k</i></b> = 8, 13 and 21 initial nodes and activation probability values of <b><i>p</i></b> = 0.01, 0.05 and 0.1.  Whereas the method of identifying seed nodes is formula based, the Hill Climbing node identification algorithm aborts if the reach does not improve in a timestep.
+To compare the influence spread by seeds identified by different techniques I simulated the diffusion on <b><i>k</i></b> = 8, 13 and 21 initial nodes and activation probability values of <b><i>p</i></b> = 0.01, 0.05 and 0.1.  Whereas the method of identifying seed nodes is formula based, the Hill Climbing node identification algorithm terminates early if the reach does not improve in a timestep.
 </br>
 In my experiments I found that in almost all the cases while nodes identified by betweenness centrality performed best and slightly better than the nodes identified by the Greedy Hill Climbing algorithm, the influence spread (no. of nodes activated) to number of seed nodes ratio was usually better for the Greedy Hill Climbing algorithm. Results of the experiments are shown in the table below.
 </br>
