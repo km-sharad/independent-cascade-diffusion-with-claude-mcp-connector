@@ -1,4 +1,4 @@
-# Independent Cascade Diffusion Integrated with Claude MCP Connector
+# Data Mined using Independent Cascade Diffusion Integrated with Claude MCP Connector
 I discuss and demonstrate the impact of seed nodes selection on information diffusion in a network. Using a publicly available tiny subset of Facebook ego graph. I then show how insights obtained by data mining on a network can be integrated with a LLM - like Claude - by building connectors using the <a href="https://code.claude.com/docs/en/mcp">Model Context Protocol (MCP)</a> architecture so that users can ask network related questions in natural language.
 
 <h3>Introduction</h3>
